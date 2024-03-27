@@ -2,13 +2,21 @@
 
 <div class="row">
     <?php
-        for ($i = 1; $i <= 16; $i++) {
+        
+        $albums = getAlbums($albums);
+
+        foreach ($albums as $album){
+
+            $infoAlbum = explode('/', $album);
+            $nameAlbum = $infoAlbum[1];
+            $imgAlbum = "{$album}/{$nameAlbum}.jpeg";
     ?>
     <div class="col-3">
         <a href="">
-            <img src="../imagens/meteora.jpeg" class="img-album">
+            <img src="<?php echo $imgAlbum ?>" class="img-album">
+            <?php echo $nameAlbum ?>
         </a>
-        Álbum <?php echo $i ?>
+        
     </div>
     <?php
         }
