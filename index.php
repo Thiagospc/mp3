@@ -17,14 +17,14 @@
     <div class="container">
         <?php
             if (isset($_GET["page"])) {
-                if (file_exists("../pages/{$_GET["page"]}.php")) {
-                    include_once "../pages/{$_GET["page"]}.php";
+                if (file_exists("pages/{$_GET["page"]}.php")) {
+                    include_once "pages/{$_GET["page"]}.php";
                 }else{
-                    include_once '../pages/error404.php';
+                    include_once 'pages/error404.php';
                 }
                 
             } else {
-                include_once '../pages/albums.php'; 
+                include_once 'pages/albums.php';  
             }
         ?>
     </div>
