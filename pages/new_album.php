@@ -25,16 +25,15 @@
         }
 
         $file = $_FILES['image']['name'];
-        $fileInfo = explode('.', $file['name']);
-        $extension = $fileInfo[1];
-        $nameImage = $_POST['name'] . '.' . $extension;
-
-        if (move_uploaded_file($file['tmp_name'], $path . '/' . $nameImage)) {
-            die('entrou');
+        $temp_file = $_FILES['image']['tmp_name']; 
+    
+        $destination = $path . '/' . $file; 
+        
+        if (move_uploaded_file($temp_file, $destination)) {
             header('Location: ?page=albums');
-        }else{
-            echo 'Falha no upload...';
-        }
+        } else {
+            echo "Houve um erro ao enviar o arquivo.";
+        }   
     }
 ?>
 
