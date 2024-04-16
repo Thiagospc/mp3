@@ -37,10 +37,14 @@
                 <span id="currentTime">0:00</span>
                 <span id="duration">0:00</span>
             </div>
-            <img src="./layout/prev.svg" alt="Anterior">
-            <img src="./layout/play.svg" alt="Play">
-            <img src="./layout/pause.svg" alt="Pause">
-            <img src="./layout/next.svg" alt="Próximo">
+            <button><img src="./layout/prev.svg" alt="Anterior"></button>
+            <button id="playButton" onclick="togglePlayPause()">
+                <img src="./layout/play.svg" alt="Play">
+            </button>
+            <button id="pauseButton" onclick="togglePlayPause()" style="display: none;">
+                <img src="./layout/pause.svg" alt="Pause">
+            </button>
+            <button><img src="./layout/next.svg" alt="Próximo"></button>
         </div>
 
     </div>
@@ -50,5 +54,20 @@
     src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" 
     crossorigin="anonymous"></script>
+
+    <script>
+        function togglePlayPause() {
+            var playButton = document.getElementById('playButton');
+            var pauseButton = document.getElementById('pauseButton');
+
+            if (playButton.style.display !== 'none') {
+                playButton.style.display = 'none';
+                pauseButton.style.display = 'inline-block';
+            } else {
+                playButton.style.display = 'inline-block';
+                pauseButton.style.display = 'none';
+            }
+        }
+    </script>
 </body>
 </html>
