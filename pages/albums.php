@@ -1,6 +1,6 @@
-<h1>Álbums</h1>
+<h1>Sua Biblioteca</h1>
 
-<a href="?page=new_album" class="btn btn-success">Adicionar novo Álbum</a>
+<a href="?page=new_album" class="btn btn-success">+</a>
 
 <hr>
 
@@ -15,7 +15,7 @@
             $nameAlbum = $infoAlbum[1];
             $imgAlbum = "{$album}/{$nameAlbum}.jpeg";
     ?>
-    <div class="col-3">
+    <div class="col-4">
         <a href="?page=music&album=<?=$nameAlbum?>">
             <img src="<?php echo $imgAlbum ?>" class="img-album">
             <?php echo $nameAlbum ?>

@@ -13,7 +13,6 @@
 
 </head>
 <body>
-
     <div class="container">
         <?php
             include_once 'helpers.php';
@@ -29,6 +28,18 @@
                 include_once 'pages/albums.php';  
             }
         ?>
+
+        <div class="player-controls">
+            <div class="time">
+                <span id="currentTime">0:00</span>
+                <span id="duration">0:00</span>
+            </div>
+            <img src="./layout/prev.svg" alt="Anterior">
+            <img src="./layout/play.svg" alt="Play">
+            <img src="./layout/pause.svg" alt="Pause">
+            <img src="./layout/next.svg" alt="Próximo">
+        </div>
+
     </div>
     
 
