@@ -27,6 +27,10 @@ body{
     position: relative;
 }
 
+.row{
+    width: 58vh;
+}
+
 .cabecalhoAlbums{
     display: flex;
     justify-content: space-between;
@@ -115,6 +119,7 @@ body{
     .img-album {
         width: 100%; /* 100% da largura do contêiner pai */
     }
+
 }
 
 @media only screen and (max-width: 340px) {
