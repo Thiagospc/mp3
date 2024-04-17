@@ -1,4 +1,4 @@
-<a href="?page=albums">Voltar para os Álbums</a>
+<a href="?page=albums"><<</a>
 <h1>cadastrar novas músicas para <?=$_GET['album']?></h1>
 
 <form action="#" method="post" enctype="multipart/form-data">

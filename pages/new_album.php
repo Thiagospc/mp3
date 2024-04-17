@@ -18,6 +18,7 @@
 <?php
     if ($_SERVER['REQUEST_METHOD'] == 'POST'){
         $album = $_POST['name'];
+        $album = str_replace(' ', '_', $album);
         $path = "albums/{$album}";
 
         if (!is_dir($path)){
@@ -25,6 +26,8 @@
         }
 
         $file = $_FILES['image']['name'];
+        $file_extension = pathinfo($file, PATHINFO_EXTENSION);
+        $file = "$album.$file_extension";
         $temp_file = $_FILES['image']['tmp_name']; 
     
         $destination = $path . '/' . $file; 

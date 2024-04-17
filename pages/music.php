@@ -1,8 +1,11 @@
-<h1>Músicas do Álbum <?=$_GET['album']?></h1>
-<p><a href="?page=albums">Voltar para os Álbums</a></p>
+<div class="cabecalhoAlbums">
+    <h1>Músicas do Álbum <?=$_GET['album']?></h1>
+    <p><a href="?page=new_music&album=<?=$_GET['album']?>" class="btn btn-success" id="bnt-add">+</a></p>
+</div>
 
-<p><a href="?page=new_music&album=<?=$_GET['album']?>" class="btn btn-success">Adicionar novas músicas</a></p>
 
+
+<p><a href="?page=albums"><<</a></p>
 <?php
     $album = $_GET['album'];
     $music = getMusics($album);
