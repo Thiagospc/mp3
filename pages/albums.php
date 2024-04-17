@@ -7,24 +7,26 @@
 
 <hr>
 
-<div class="row">
-    <?php
-        
-        $albums = getAlbums($albums);
+<div class="music-container" style="height: 30vw; overflow-y: scroll;">
+    <div class="row">
+        <?php
+            
+            $albums = getAlbums($albums);
 
-        foreach ($albums as $album){
+            foreach ($albums as $album){
 
-            $infoAlbum = explode('/', $album);
-            $nameAlbum = $infoAlbum[1];
-            $imgAlbum = "{$album}/{$nameAlbum}.jpeg";
+                $infoAlbum = explode('/', $album);
+                $nameAlbum = $infoAlbum[1];
+                $imgAlbum = "{$album}/{$nameAlbum}.jpeg";
 
-            $nameAlbumShow = str_replace('_', ' ', $nameAlbum);
-    ?>
-    <div class="col-4">
-        <a href="?page=music&album=<?=$nameAlbum?>"><img src="<?php echo $imgAlbum ?>" class="img-album"></a>
-        <p class="nomeAlbum"><?php echo $nameAlbumShow ?></p>
+                $nameAlbumShow = str_replace('_', ' ', $nameAlbum);
+        ?>
+        <div class="col-4">
+            <a href="?page=music&album=<?=$nameAlbum?>"><img src="<?php echo $imgAlbum ?>" class="img-album"></a>
+            <p class="nomeAlbum"><?php echo $nameAlbumShow ?></p>
+        </div>
+        <?php
+            }
+        ?>
     </div>
-    <?php
-        }
-    ?>
 </div>

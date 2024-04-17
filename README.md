@@ -1,6 +1,7 @@
-## Alterações a serem feitas
-- fazer a imagem ter o mesmo nome da pasta
-- corrigir os caps entre o nome da pasta
+## ajustes de funcionalidade
+- fazer o player ser o principal.
+- fazer as músicas mostrarem o click e nome.
+- quando tocar a música deve mostar ela tocando com a capa do álbum.
 
 ## ajustar para mobile
 - mostrar o nome da música

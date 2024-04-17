@@ -1,3 +1,8 @@
+
+body{
+    background-color: #000;
+}
+
 .img-album{
     max-width: 100%;
     max-height: 145px;
@@ -14,9 +19,9 @@
     margin-right: auto; 
     margin-left: auto; 
     margin-top: 1%;
+    background-color: #fff;
     /* background-image: radial-gradient(circle at 120.71% 50%, #000000 0, #000000 50%, #000000 100%); */
-    /* background-image: radial-gradient(circle at 120.71% 50%, #00b019 0, #00b019 50%, #00b019 100%); */
-}
+    /* background-image: radial-gradient(circle at 120.71% 50%, #00b019 0, #00b019 50%, #00b019 100%); */}
 
 .container {
     position: relative;
